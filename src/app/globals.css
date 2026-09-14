@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #05060a;
+  --fg: #f4f1ea;
+  --gold: #d4af77;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --font-sans: var(--font-display);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.glow-gold { box-shadow: 0 0 40px rgba(212,175,119,0.18); }
+
+.grid-bg {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(124,108,255,0.18), transparent),
+    radial-gradient(ellipse 50% 40% at 90% 10%, rgba(212,175,119,0.12), transparent),
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: auto, auto, 64px 64px, 64px 64px;
+}
+
+.gold-text {
+  background: linear-gradient(120deg, #f8e7c3, #d4af77 40%, #fff 50%, #d4af77 70%, #b8894a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float { animation: float 6s ease-in-out infinite; }
+.float-delay { animation: float 7.5s ease-in-out 1s infinite; }

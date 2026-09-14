@@ -1,0 +1,32 @@
+export type ProjectStatus = "New" | "Confirmed" | "In Progress" | "Review" | "Revision" | "Completed";
+
+export type ProjectRequest = {
+  id: string;
+  createdAt: string;
+  status: ProjectStatus;
+  name: string;
+  email: string;
+  whatsapp: string;
+  company: string;
+  service: string;
+  projectType: string;
+  contentType: string;
+  duration: string;
+  format: string;
+  quality: string;
+  captions: string;
+  voiceOver: string;
+  music: string;
+  visualStyle: string;
+  language: string;
+  deliverables: number;
+  revisions: number;
+  platform: string;
+  deadline: string;
+  budget: string;
+  references: string;
+  description: string;
+  files: string[];
+  notes: string;
+  estimate: number;
+};
